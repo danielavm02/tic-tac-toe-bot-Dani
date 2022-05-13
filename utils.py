@@ -65,7 +65,7 @@ def read_board() -> list:
     return board
 
 
-def decide_move(board: list, player_id: str) -> [int, int]:
+def decide_move(board: list, player_id: str) -> list:
     """
     Decides next move to make.
     """
