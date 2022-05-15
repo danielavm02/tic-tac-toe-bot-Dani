@@ -4,7 +4,6 @@ import utils
 
 
 def main():
-
     NAME = "Daniela"
     print("\n------- Starting tic-tac-toe bot -------\n")
 
@@ -40,12 +39,13 @@ def main():
 
         # Entering cycle of deciding-validating our next move
         valid_move = False
-
+        
         while not valid_move:
 
             print("Deciding move...\n")
             sleep(1)
             next_move = utils.decide_move(board, PLAYER_ID)
+            print(next_move)
             valid_move = utils.validate_move(board, next_move) # Validates next move
 
         print("Move to send, row: {}, col: {}\n".format(next_move[0], next_move[1]))
@@ -61,6 +61,7 @@ def main():
     print("GAME OVER\nCheck API for winner.")
 
 if __name__ == '__main__':
+    movenumber=0
     main()
 
 
