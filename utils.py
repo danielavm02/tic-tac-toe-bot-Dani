@@ -81,18 +81,207 @@ def decide_move(board: list, player_id: str) -> list:
                 column = 2
                 movenumber=movenumber+1
     if (movenumber==1):
-        if (board[1][1] == "-"):
-            row=1
-            column=1 
-            movenumber=movenumber+1
-        elif (board[0][0] == "-"):
+        if (board[0][0] == "-"):
             row=0
             column=0 
             movenumber=movenumber+1            
-        else: 
+        elif(board[2][0]=="-"): 
             row=2
             column=0
             movenumber=movenumber+1 
+        if(other_player== board[0][0] and board[0][1] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[0][2] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[0][2] == other_player and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[1][1] == other_player and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[1][1] and board[1][2] == other_player and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[1][2] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[2][0] and board[2][1] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[2][1] and board[2][2] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[2][0] and board[2][2] == other_player and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[2][0] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[2][0] == other_player and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[1][0] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[1][1] and board[2][1] == other_player and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[2][1] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[1][1] == other_player and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][2] and board[2][2] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[2][2] == other_player and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][2] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[2][2] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[2][0] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][1] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][1] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[1][1] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[2][2] and board[1][1] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        ##ofensa 
+        if (player_id== board[0][0] and board[0][1] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[0][2] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[0][2] == player_id and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[1][1] == player_id and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[1][1] and board[1][2] == player_id and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[1][2] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[2][0] and board[2][1] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[2][1] and board[2][2] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[2][0] and board[2][2] == player_id and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[2][0] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[2][0] == player_id and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[1][0] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[1][1] and board[2][1] == player_id and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[2][1] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[1][1] == player_id and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][2] and board[2][2] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[2][2] == player_id and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][2] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[2][2] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[2][0] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][1] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][1] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[1][1] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
     if (movenumber==2):   
         #defensa 
         if(other_player== board[0][0] and board[0][1] == other_player and board[0][2]=="-"):
@@ -288,19 +477,6 @@ def decide_move(board: list, player_id: str) -> list:
             row=0
             column = 0
             movenumber=movenumber+1
-        # ##ninguna se cumple 
-        # if (board[2][2]=="-"):
-        #     row=2
-        #     column=2
-        # elif (board[2][0]=="-"):
-        #     row=2
-        #     column=2
-        # elif(board[0][0]=="-"):
-        #     row=0
-        #     column=0
-        # elif(board[0][2]=="-"):
-        #     row=0
-        #     column=2
     if (movenumber==3):   
         #defensa 
         if(other_player== board[0][0] and board[0][1] == other_player and board[0][2]=="-"):
@@ -496,19 +672,6 @@ def decide_move(board: list, player_id: str) -> list:
             row=0
             column = 0
             movenumber=movenumber+1
-        # ##ninguna se cumple 
-        # if (board[2][2]=="-"):
-        #     row=2
-        #     column=2
-        # elif (board[2][0]=="-"):
-        #     row=2
-        #     column=2
-        # elif(board[0][0]=="-"):
-        #     row=0
-        #     column=0
-        # elif(board[0][2]=="-"):
-        #     row=0
-        #     column=2
     if (movenumber==4):   
         #defensa 
         if(other_player== board[0][0] and board[0][1] == other_player and board[0][2]=="-"):
@@ -704,19 +867,201 @@ def decide_move(board: list, player_id: str) -> list:
             row=0
             column = 0
             movenumber=movenumber+1
-        # ##ninguna se cumple 
-        # if (board[2][2]=="-"):
-        #     row=2
-        #     column=2
-        # elif (board[2][0]=="-"):
-        #     row=2
-        #     column=2
-        # elif(board[0][0]=="-"):
-        #     row=0
-        #     column=0
-        # elif(board[0][2]=="-"):
-        #     row=0
-        #     column=2
+    if (movenumber==5):   
+        #defensa 
+        if(other_player== board[0][0] and board[0][1] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[0][2] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[0][2] == other_player and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[1][1] == other_player and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[1][1] and board[1][2] == other_player and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[1][2] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[2][0] and board[2][1] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[2][1] and board[2][2] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[2][0] and board[2][2] == other_player and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][0] and board[2][0] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[2][0] == other_player and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[1][0] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[1][1] and board[2][1] == other_player and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[2][1] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][1] and board[1][1] == other_player and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[1][2] and board[2][2] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[2][2] == other_player and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][2] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[2][2] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[2][0] == other_player and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][1] == other_player and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[0][2] and board[1][1] == other_player and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (other_player== board[0][0] and board[1][1] == other_player and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (other_player== board[2][2] and board[1][1] == other_player and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        ##ofensa 
+        if (player_id== board[0][0] and board[0][1] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[0][2] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[0][2] == player_id and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[1][1] == player_id and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[1][1] and board[1][2] == player_id and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[1][2] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[2][0] and board[2][1] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[2][1] and board[2][2] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[2][0] and board[2][2] == player_id and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][0] and board[2][0] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[2][0] == player_id and board[1][0]=="-"):
+            row=1
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[1][0] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[1][1] and board[2][1] == player_id and board[0][1]=="-"):
+            row=0
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[2][1] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][1] and board[1][1] == player_id and board[2][1]=="-"):
+            row=2
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[1][2] and board[2][2] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[2][2] == player_id and board[1][2]=="-"):
+            row=1
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][2] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[2][2] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[2][0] == player_id and board[1][1]=="-"):
+            row=1
+            column = 1
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][1] == player_id and board[0][2]=="-"):
+            row=0
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[0][2] and board[1][1] == player_id and board[2][0]=="-"):
+            row=2
+            column = 0
+            movenumber=movenumber+1
+        elif (player_id== board[0][0] and board[1][1] == player_id and board[2][2]=="-"):
+            row=2
+            column = 2
+            movenumber=movenumber+1
+        elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
+            row=0
+            column = 0
+            movenumber=movenumber+1
     return [row, column]
 
 
