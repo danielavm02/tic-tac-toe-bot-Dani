@@ -275,9 +275,10 @@ def decide_move(board: list, player_id: str) -> list:
             column = 0
             movenumber=movenumber+1
         elif (player_id== board[0][0] and board[1][1] == player_id and board[2][2]=="-"):
-            row=2
+            row= 2
             column = 2
             movenumber=movenumber+1
+            return [row,column]
         elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
             row=0
             column = 0
@@ -473,6 +474,7 @@ def decide_move(board: list, player_id: str) -> list:
             row=2
             column = 2
             movenumber=movenumber+1
+            return [2,2]
         elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
             row=0
             column = 0
@@ -668,6 +670,7 @@ def decide_move(board: list, player_id: str) -> list:
             row=2
             column = 2
             movenumber=movenumber+1
+            return [2,2]
         elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
             row=0
             column = 0
@@ -860,9 +863,10 @@ def decide_move(board: list, player_id: str) -> list:
             column = 0
             movenumber=movenumber+1
         elif (player_id== board[0][0] and board[1][1] == player_id and board[2][2]=="-"):
-            row=2
+            row= 2
             column = 2
             movenumber=movenumber+1
+            return [2,2]
         elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
             row=0
             column = 0
@@ -1058,6 +1062,7 @@ def decide_move(board: list, player_id: str) -> list:
             row=2
             column = 2
             movenumber=movenumber+1
+            return [2,2]
         elif (player_id== board[2][2] and board[1][1] == player_id and board[0][0]=="-"):
             row=0
             column = 0
